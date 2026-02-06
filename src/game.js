@@ -49,12 +49,3 @@ export default class Game {
             (b[0][2] !== null && b[0][2] === b[1][1] && b[0][2] === b[2][0]))
   }
 }
-
-// Remove 'async' and keep 'done':
-it('Contains the compiled JavaScript', (done) => {
-  fs.readFile('./public/main.js', 'utf8', (err, data) => {
-    expect(err).toBe(null)
-    expect(data).toMatchSnapshot()
-    done()
-  })
-})
